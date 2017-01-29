@@ -1,0 +1,216 @@
+/* 
+Author: Daniel van Leusen
+UCID: 10064708
+SENG 513 Tutorial 01
+Assignment 1
+January. 28, 2016
+
+Disclaimer: All information on this website is fake.
+The website is created for educational purposes, it will
+be removed completely after.
+
+Pictures are not owned by the site creator, they can be found here:
+http://www.thephotosclub.com/
+http://www.epatientdave.com/
+http://www.sethkaye.com/
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #FFFFEE;
+	font-family: Palatino, serif;
+	background-image: url("sources/bg2.jpg");
+	background-size: cover;
+}
+
+h1 {
+	color: #EB99AE;
+	margin: 50px auto;
+	margin-left: 100px;
+	margin-top: 100px;
+}
+
+/* collapsed border with alternating colors */
+table {
+	margin: 50px auto;
+	margin-top: -100px;
+	margin-left: 100px;
+	margin-bottom: 100px;
+	float: left;
+	border: none;
+	width: 625px;
+	display: block;
+	text-align: left;
+	font-size: 1.2em;
+	border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+	width: 250px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/* navigation bar is black*/
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+	color: #F0F0F0;
+	text-align: center;
+}
+
+.navigation li {
+	line-height: 40px;
+	height: 40px;
+}
+
+/* navigation letters are white */
+.navigation a {
+    display: block;
+	font-family: Palatino, serif;
+	font-size: 1.4em;
+	font-variant: small-caps;
+    color: #F0F0F0;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* when active, navigation bar is dark grey */
+.navigation a.active {
+    background-color: #5D5D5D;
+    color: #F0F0F0;
+
+}
+
+/* when hovering, navigation bar is light grey */
+.navigation a:hover:not(.active) {
+    background-color: #C3C3C3;
+    color: #F0F0F0;
+}
+
+.box {
+	width: 1372px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	margin: 80px auto;
+	border: 2px solid #F1F1F1;
+	background-color: #F1F1F1;
+	box-shadow: 2px 3px 3px #ccc;
+}
+
+/* preview pictures on the index page, click to view full images */
+.preview {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+	border: 1px solid #F1F1F1;
+}
+
+.preview li {
+	padding: 0;
+	margin: 0;
+	float: left;
+	clear: both;
+}
+
+.preview li a img {
+	width: 195px;
+	display: block;
+	border: none;
+}
+
+.preview li a {
+	display: block;
+}
+
+.fullview  {
+	width: 1175px;
+	height: 780px;
+	overflow: hidden;
+	float: left;
+}
+
+.full-pic {
+	width: 1175px;
+}
+
+/* 
+parallax scrolling with a min-height of 450px
+works fine on 1920*1080 and 3840*2160
+*/
+.parallax {
+    background-image: url("sources/title2.jpg");
+    min-height: 450px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.textBox {
+	margin: 50px auto;
+	margin-top: 0px;
+	margin-left: 100px;
+	margin-bottom: 100px;
+	float: left;
+	border: none;
+	width: 625px;
+	display: block;
+	text-align: left;
+	font-size: 1.2em;
+}
+
+.selfie {
+	margin: 50px auto;
+	margin-top: 0px;
+	margin-right: 100px;
+	margin-bottom: 100px;
+	width: 400px;
+	overflow: hidden;
+	float: right;
+	border-radius: 5px;
+	border: 2px solid #FFFFFF;
+}
+
+.testimonial img{
+	margin: 50px auto;
+	margin-top: 10px;
+	margin-right: 100px;
+	margin-bottom: 50px;
+	float: right;
+	width: 250px;
+	border-radius: 5px;
+	border: 2px solid #FFFFFF;
+}
+
+#copyright {
+    text-align: center;
+    text-decoration: none;
+	font-size: 1em;
+	color: #F0F0F0;
+} 
+
+/* 
+when screen width is smaller than 600px
+navigation bar goes into columns instead of inline
+*/
+@media screen and (min-width: 600px) {
+	.navigation li {
+		width: 250px;
+		border-bottom: none;
+		height: 50px;
+		line-height: 50px;
+		font-size: 1.4em;
+		display: inline-block;
+		margin-right: -5px;
+	}
+}
