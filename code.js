@@ -2,8 +2,11 @@
 // this is just a stub for a function you need to implement
 //
 function getStats(txt) {
+	
+	var text = txt,
+	var nChars = text.length,
     return {
-        nChars: 123,
+        nChars: text.length,
         nWords: 22,
         nLines: 10,
         nNonEmptyLines: 22,
@@ -15,3 +18,47 @@ function getStats(txt) {
     };
 }
 
+function nChars(txt) {
+	
+	
+}
+
+function nWords(txt) {
+	
+	
+}
+
+function nLines(txt) {
+	
+	
+}
+
+function nNonEmptyLines(txt) {
+	
+	
+}
+
+function maxLineLength(txt) {
+	
+	
+}
+
+function averageWordLength(txt) {
+	
+	
+}
+
+function palindromes(txt) {
+	
+	
+}
+
+function longestWords(txt) {
+	
+	
+}
+
+function mostFrequentWords(txt) {
+	
+	
+}
