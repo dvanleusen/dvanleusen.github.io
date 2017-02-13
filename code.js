@@ -26,7 +26,7 @@ function getStats(txt) {
         averageWordLength: averageLength,
         palindromes: palindromeArray,
         longestWords: longestArray,
-        mostFrequentWords: mostFrequentArray,
+        mostFrequentWords: mostFrequentArray
     };
 }
 
@@ -154,10 +154,13 @@ function getPalindrome(wordArray){
 	// checks each word if is palindrome, if yes, it is added to the palindromeArray
 	for (index; index < wordArray.length; index++){
 		reversedWordArray[index] = wordArray[index].split('').reverse().join('');
-		if (reversedWordArray[index] === wordArray[index]){
+		if ((reversedWordArray[index] === wordArray[index])&&(wordArray[index].length > 2)){
 			palindromeArray.push(wordArray[index]);
 		}
 	}
+	
+	//checkes if array is empty
+	if (palindromeArray[0] === "") palindromeArray = [];
 	return palindromeArray;
 }
 
@@ -184,15 +187,19 @@ function getLongest(wordArray){
 	
 	// sorts by length and then alphabetically (numbers go before letters if they have the same length)
 	sortedLengthArray = uniqueArray.sort(function(a,b){return compareLength(a.length, b.length) || compareChar(a, b)});
-
+	
 	// takes the first 10 of words in the array
 	if (sortedLengthArray.length > TEN){
 		for (index; index < TEN; index++){
 			longestArray.push(sortedLengthArray[index]);
 		}
-		return longestArray;	
+	} else {
+		longestArray = sortedLengthArray;
 	}
-	return sortedLengthArray;
+	
+	//checkes if array is empty
+	if (longestArray[0] === "") longestArray = [];
+	return longestArray;
 }
 
 /*	mostFrequentWords: array of strings
@@ -207,6 +214,7 @@ function mostFrequent(wordArray){
 	let mostFrequentArray = [];
 	let	sortedFrequencyArray = [];
 	let finalFrequencyResult =[];
+	let emptyArray = [];
 	let index = 0;
 	const TEN = 10;
 	
@@ -234,6 +242,10 @@ function mostFrequent(wordArray){
 	for (index; index < mostFrequentArray.length; index++){
 		finalFrequencyResult[index] = mostFrequentArray[index]+"("+count[mostFrequentArray[index]]+")";
 	}
+	
+	// checks if the array is empty
+	if (mostFrequentArray[0] === "") finalFrequencyResult = [];
+	
 	return finalFrequencyResult;
 }
 
