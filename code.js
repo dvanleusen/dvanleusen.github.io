@@ -1,4 +1,8 @@
-// this is just a stub for a function you need to implement
+/* Name: Daniel van Leusen
+UCID: 10064708
+Assignment 2
+SENG 513 Tutorial 01
+*/
 
 function getStats(txt) {
 	let text1 = txt.toLowerCase();
@@ -31,7 +35,9 @@ Will contain the total number of characters in the text1, including all white sp
 */
 function numberChars(txt){
 	//does not count breaks
-	numChars = txt.length - (txt.match(/\n/gm)||"").length;
+	numChars = txt.length 
+	// include the following line if you do not want to count all the breaks!
+	// numChars = txt.length - (txt.match(/\n/gm)||"").length;
 	
 	// if nothing is entered, then no character
 	if (numChars === null){
